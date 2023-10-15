@@ -1,0 +1,18 @@
+<html>
+    {% include 'head.html'%}
+    <body>
+        <div id="master">
+            {% include 'header.html'%}
+            <br>
+            <div id="body">
+                <p>Welcome to the gallery of babel.</p>
+                <a href="{{url_for('min')}}">First</a>   
+                <a href="{{url_for('max')}}">Last</a>    
+                <a href="{{url_for('random')}}">Random</a>
+            </div>
+            <br>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    {% include 'head.html'%}
+    <body>
+        <div id="master">
+            {% include 'header.html'%}
+            <br>
+            <div id="body">
+                <div id="info">
+                    <div class="frame">
+                        <img src="{{context.image_url}}">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="sameLine">
+                        <form action="{{url_for('min')}}">
+                            <input type="submit" value="first" />
+                        </form>
+                        <form action="{{url_for('prevof', id=context.id)}}">
+                            <input type="submit" value="prev" />
+                        </form>
+                        <form action="{{url_for('random')}}">
+                            <input type="submit" value="random" />
+                        </form>
+                        <form action="{{url_for('nextof', id=context.id)}}">
+                            <input type="submit" value="next" />
+                        </form>
+                        <form action="{{url_for('max')}}">
+                            <input type="submit" value="last" />
+                        </form>
+                    </div>
+                    <br>
+                    <span id="id">
+                        little endian id: {{context.id[::-1]}}
+                    </span>
+                </div>
+            </div>
+            <br>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

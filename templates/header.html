@@ -1,0 +1,14 @@
+<div id="header">
+    <a href="{{url_for('home')}}"><h1>Gallery of Babel</h1></a>
+    {% if context.configs %}
+    {{context.configs}}
+    {% endif %}
+</div>
+<div id="upload">
+    <h4>Look up an image in Babel</h4>
+    <form action = "{{url_for('upload_file')}}" method = "POST" 
+        enctype = "multipart/form-data">
+    <input type = "file" name = "file" />
+    <input type = "submit"/>
+ </form>   
+</div>
